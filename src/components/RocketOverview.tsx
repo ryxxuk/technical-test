@@ -37,7 +37,7 @@ const RocketOverview = ({
 				<p>{rocket.description}</p>
 				<div>
 					<p>
-						<strong>Cost per launch: </strong>
+						<strong>Cost per launch: </strong>$
 						{rocket.cost_per_launch}
 					</p>
 					<p>

@@ -22,13 +22,14 @@ export default function Crew({ initalData }: InputProps) {
 		// we use a temporary field with a deep clone here as the state is not updated immediately for the
 		// setting of local storage
 		let tempFavourites = [...favourites];
+		
 		if (favourites.includes(id)) {
 			tempFavourites = tempFavourites.filter((fav) => fav !== id);
-			setFavourites(tempFavourites);
 		} else {
 			tempFavourites.push(id);
-			setFavourites(tempFavourites);
 		}
+
+		setFavourites(tempFavourites);
 		localStorage.setItem("favourites", JSON.stringify(tempFavourites));
 	};
 
